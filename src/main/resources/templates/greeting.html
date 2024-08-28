@@ -9,6 +9,9 @@
 </head>
 <body>
 <p th:text="|Hello, ${name}!|"/>
+<div id="app">
+    <h1>{{ message }}</h1>
+</div>
 <div class="container text-center">
     <div class="row">
         <div class="col info-box">
@@ -34,11 +37,19 @@
         </div>
     </div>
 </div>
-
 <!-- jQuery -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <!-- adminLte -->
 <script src="https://cdn.jsdelivr.net/npm/admin-lte@3.2/dist/js/adminlte.min.js"></script>
-
+<!-- vue.js -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.7.11/dist/vue.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            message: 'Hello, Vue.js 2.x!'
+        }
+    });
+</script>
 </body>
 </html>
